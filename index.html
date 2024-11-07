@@ -19,10 +19,40 @@
         <h1>Savings</h1>
         <h1>Investment</h1>
         <h1>Insurance</h1>
-        <h1 id="btnLogIn">Log in</h1>
+        <button id="btnLogIn">Log in</button>
       </nav>
     </header>
     <main>
+      <!-- Modal Content -->
+      <div class="modal">
+        <form class="form-container">
+          <span class="close">&times;</span>
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter Username"
+            required
+          />
+
+          <label for="user-password">Password</label>
+          <input
+            type="password"
+            id="user-password"
+            name="user-password"
+            placeholder="Enter Password"
+            required
+          />
+          <button type="button" class="btnLogin">Login</button>
+          <label>
+            <input type="checkbox" name="remember" checked="checked" /> Remember
+            me
+          </label>
+          <button type="button" class="cancelbtn btnLogin">Cancel</button>
+        </form>
+      </div>
+
       <div class="slider">
         <div class="sliderContainer">
           <img src="img/slide_0.png" class="slide_img active" data-img="0" />

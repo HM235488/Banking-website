@@ -56,7 +56,6 @@ console.log();
 // REVEAL SECTIONS
 
 const allSections = document.querySelectorAll(".section");
-console.log(allSections);
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
@@ -75,4 +74,18 @@ const observer = new IntersectionObserver(revealSection, {
 allSections.forEach(function (section) {
   observer.observe(section);
   section.classList.add("section--hidden");
+});
+
+const modal = document.querySelector(".modal");
+const btnLogIn = document.querySelector("#btnLogIn");
+const cancelbtn = document.querySelector(".cancelbtn");
+
+// OPEN MODAL
+btnLogIn.addEventListener("click", () => (modal.style.display = "visible"));
+
+// CLOSE MODAL
+window.addEventListener("click", function (e) {
+  if (e.target === modal || e.target === cancelbtn) {
+    modal.style.display = "none";
+  }
 });
