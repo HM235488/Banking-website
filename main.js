@@ -76,16 +76,17 @@ allSections.forEach(function (section) {
   section.classList.add("section--hidden");
 });
 
+// LOG IN AND MODAL
 const modal = document.querySelector(".modal");
 const btnLogIn = document.querySelector("#btnLogIn");
 const cancelbtn = document.querySelector(".cancelbtn");
 
 // OPEN MODAL
-btnLogIn.addEventListener("click", () => (modal.style.display = "visible"));
+btnLogIn.addEventListener("click", () => (modal.style.visibility = "visible"));
 
 // CLOSE MODAL
 window.addEventListener("click", function (e) {
   if (e.target === modal || e.target === cancelbtn) {
-    modal.style.display = "none";
+    modal.style.visibility = "hidden";
   }
 });
