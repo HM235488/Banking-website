@@ -1,5 +1,8 @@
 * {
   font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 p {
@@ -7,29 +10,37 @@ p {
 }
 
 header {
-  margin-right: 15px;
-  background-color: white;
-  color: rgb(66, 61, 61);
-  height: 200px;
-}
-
-.logo {
   display: inline-flex;
-  font-size: 30px;
-  position: absolute;
-  left: 40%;
-  align-items: center;
+  height: 10rem;
+  width: 100%;
 }
 
-.navigationBar {
+.bank__logo {
+  width: 20%;
+  text-wrap: nowrap;
+  justify-content: start;
+  font-size: 4rem;
+  margin: 2rem 5rem 2rem 3rem;
+}
+
+nav {
+  width: 100%;
+  margin-right: 40px;
+}
+.navigation__bar {
+  list-style-type: none;
   display: inline-flex;
   justify-content: end;
   width: 100%;
   align-items: center;
 }
 
-.navigationBar > h1 {
-  padding: 15px;
+.nav__item {
+  margin: 15px;
+}
+
+.nav__item a:link {
+  text-decoration: none;
 }
 
 #btnLogIn {
