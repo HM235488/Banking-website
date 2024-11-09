@@ -27,16 +27,36 @@ nav {
   width: 100%;
   margin-right: 40px;
 }
-.navigation__bar {
+.navigation__bar,
+.footer {
   list-style-type: none;
   display: inline-flex;
-  justify-content: end;
   width: 100%;
   align-items: center;
+  text-transform: uppercase;
+}
+
+.nav__item a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  transition: 0.15s ease-in-out;
+}
+.nav__item a:hover:after {
+  width: 100%;
+}
+
+.navigation__bar {
+  justify-content: end;
 }
 
 .nav__item {
   margin: 15px;
+  position: relative;
 }
 
 .nav__item a:link {
@@ -134,8 +154,7 @@ nav {
 }
 
 /* FOOTER */
-footer {
-  display: flex;
+.footer {
   justify-content: center;
   padding: 2rem 0px;
   margin-top: 5rem;
@@ -143,14 +162,14 @@ footer {
   background-color: rgb(59, 56, 56);
 }
 
-footer > h3 {
+.footer > li {
   margin: 30px;
   cursor: pointer;
 }
 
-footer > h3:hover {
+/* .footer > li:hover {
   text-decoration: underline;
-}
+} */
 
 /* MODAL */
 .modal {

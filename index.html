@@ -7,6 +7,11 @@
     <title>BANK B</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.png" />
     <link rel="stylesheet" href="style.css" />
+    <!--Font Awesome Library for icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
     <header>
@@ -15,17 +20,21 @@
       <nav>
         <ul class="navigation__bar">
           <li class="nav__item"><a href="index.html">Home</a></li>
-          <li class="nav__item">Savings</li>
+          <li class="nav__item"><a href="#">Savings</a></li>
           <li class="nav__item">
             <a href="/mortgageCalculator.html">Mortgage</a>
           </li>
-          <li class="nav__item">Insurance</li>
-          <li class="nav__item"><button id="btnLogIn">Log in</button></li>
+          <li class="nav__item"><a href="#">Insurance</a></li>
+          <li class="nav__item">
+            <button id="btnLogIn">Log in</button>
+          </li>
+          <label for="check" class="close__menu"> </label>
         </ul>
+        <label for="check" class="open__menu"> </label>
       </nav>
     </header>
     <main>
-      <!-- LOGIN MODAL -->
+      <!-- LOGIN WINDOW -->
       <div class="modal">
         <form class="form-container">
           <span class="close">&times;</span>
@@ -107,11 +116,14 @@
     </main>
     <!--FOOTER-->
     <footer>
-      <h3>About us</h3>
-      <h3>Terms of Use</h3>
-      <h3>Privacy policy</h3>
-      <h3>Careers</h3>
-      <h3>Contact Us</h3>
+      <ul class="footer">
+        <li>About us</li>
+        <li>About us</li>
+        <li>Terms of Use</li>
+        <li>Privacy policy</li>
+        <li>Careers</li>
+        <li>Contact Us</li>
+      </ul>
     </footer>
   </body>
 
