@@ -1,7 +1,11 @@
 "use strict";
-const arrowLeft = document.querySelector(".sliderBtnLeft");
-const arrowRight = document.querySelector(".sliderBtnRight");
+const arrowLeft = document.querySelector(".slider__btn__left");
+const arrowRight = document.querySelector(".slider__btn__right");
 const slideImages = document.querySelectorAll(".slide_img");
+const modal = document.querySelector(".modal");
+const logInButton = document.querySelector("#login__button");
+const cancelButton = document.querySelector(".cancel__button");
+const closeButton = document.querySelector(".close__button");
 
 let curSlide = 0;
 
@@ -49,10 +53,6 @@ arrowLeft.addEventListener("click", slideLeftArrow);
 arrowRight.addEventListener("click", slideRightArrow);
 goToSlide(0);
 
-console.log(document.querySelector("img[src='img/slide_0.png']"));
-
-console.log();
-
 // REVEAL SECTIONS
 
 const allSections = document.querySelectorAll(".section");
@@ -77,16 +77,20 @@ allSections.forEach(function (section) {
 });
 
 // LOG IN AND MODAL
-const modal = document.querySelector(".modal");
-const btnLogIn = document.querySelector("#btnLogIn");
-const cancelbtn = document.querySelector(".cancelbtn");
 
 // OPEN MODAL
-btnLogIn.addEventListener("click", () => (modal.style.visibility = "visible"));
+logInButton.addEventListener(
+  "click",
+  () => (modal.style.visibility = "visible")
+);
 
 // CLOSE MODAL
 window.addEventListener("click", function (e) {
-  if (e.target === modal || e.target === cancelbtn) {
+  if (
+    e.target === modal ||
+    e.target === cancelButton ||
+    e.target === closeButton
+  ) {
     modal.style.visibility = "hidden";
   }
 });

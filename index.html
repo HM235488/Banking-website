@@ -16,9 +16,10 @@
   <body>
     <header>
       <!-- NAVIGATION BAR -->
-      <h1 class="bank__logo">BANK B</h1>
-      <nav>
-        <ul class="navigation__bar">
+      <nav class="nav__bar">
+        <h1 class="bank__logo">BANK B</h1>
+        <input type="checkbox" id="check" />
+        <ul class="menu">
           <li class="nav__item"><a href="index.html">Home</a></li>
           <li class="nav__item"><a href="#">Savings</a></li>
           <li class="nav__item">
@@ -26,18 +27,22 @@
           </li>
           <li class="nav__item"><a href="#">Insurance</a></li>
           <li class="nav__item">
-            <button id="btnLogIn">Log in</button>
+            <button id="login__button">Log in</button>
           </li>
-          <label for="check" class="close__menu"> </label>
+          <label for="check" class="close__menu">
+            <i class="fas fa-times"></i>
+          </label>
         </ul>
-        <label for="check" class="open__menu"> </label>
+        <label for="check" class="open__menu">
+          <i class="fas fa-bars"></i>
+        </label>
       </nav>
     </header>
     <main>
       <!-- LOGIN WINDOW -->
       <div class="modal">
         <form class="form-container">
-          <span class="close">&times;</span>
+          <span class="close__button">&times;</span>
           <label for="username">Username</label>
           <input
             type="text"
@@ -55,24 +60,26 @@
             placeholder="Enter Password"
             required
           />
-          <button type="button" class="btnLogin">Login</button>
+          <button type="button" class="modal__button">Login</button>
           <label>
             <input type="checkbox" name="remember" checked="checked" /> Remember
             me
           </label>
-          <button type="button" class="cancelbtn btnLogin">Cancel</button>
+          <button type="button" class="cancel__button modal__button">
+            Cancel
+          </button>
         </form>
       </div>
 
       <!-- BANNER -->
       <div class="slider">
-        <div class="sliderContainer">
+        <div class="slider__container">
           <img src="img/slide_0.png" class="slide_img active" data-img="0" />
           <img src="img/slide_1.png" class="slide_img hidden" data-img="1" />
           <img src="img/slide_2.png" class="slide_img hidden" data-img="2" />
         </div>
-        <button class="sliderBtn sliderBtnLeft">&larr;</button>
-        <button class="sliderBtn sliderBtnRight">&rarr;</button>
+        <button class="slider__btn slider__btn__left">&larr;</button>
+        <button class="slider__btn slider__btn__right">&rarr;</button>
       </div>
 
       <!-- SECTIONS -->
