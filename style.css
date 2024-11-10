@@ -154,8 +154,8 @@ header {
 .slider {
   position: relative;
   width: 100%;
-  height: 500px;
-  display: flex;
+  height: 699px;
+  display: inline-flex;
 }
 
 .slider__container {
@@ -172,13 +172,12 @@ header {
   border-radius: 50%;
   font-size: 30px;
   position: absolute;
-  top: 50%;
+  top: 40%;
 }
 
 .slide_img {
   width: 100%;
   position: absolute;
-  top: -100px;
   transition: transform 1s;
 }
 
@@ -199,9 +198,6 @@ header {
 /* MAIN */
 .all_sections {
   margin: 0 auto;
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
-  /* gap: 20px 50px; */
   width: 90%;
 }
 
