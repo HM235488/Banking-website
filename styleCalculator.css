@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.calculator--container {
+  width: 60%;
+  display: block;
+  margin: 3rem auto;
+  border: 1px solid var(--fontColor);
+  padding: 2rem;
+}
+
+.minmax--price--container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.down--payment--container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+#loan--term {
+  width: 100%;
+  padding: 12px 20px;
+}

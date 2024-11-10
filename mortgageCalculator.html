@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>BANK B</title>
+    <title>MORTGAGE CLACULATOR</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+
     <link rel="stylesheet" href="style.css" />
-    <!--Font Awesome Library for icons-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" href="styleCalculator.css" />
   </head>
   <body>
     <header>
@@ -67,55 +68,44 @@
       </div>
     </header>
     <main>
-      <!-- BANNER -->
-      <div class="slider">
-        <div class="slider__container">
-          <img src="img/slide_000.png" class="slide_img active" data-img="0" />
-          <img src="img/slide_001.png" class="slide_img hidden" data-img="1" />
-          <img src="img/slide_002.png" class="slide_img hidden" data-img="2" />
+      <form class="calculator--container">
+        <div>
+          <label for="home--price">Home price</label>
+          <div class="minmax--price--container">
+            <label>50 000 CZK</label>
+            <label>20 000 000 CZK</label>
+          </div>
+          <input
+            type="range"
+            id="home--price"
+            name="home--price"
+            min="50000"
+            max="20000000"
+            step="50000"
+            value="50000"
+          />
+          <input type="text" name="range--value" id="range--value" readonly />
         </div>
-        <button class="slider__btn slider__btn__left">&larr;</button>
-        <button class="slider__btn slider__btn__right">&rarr;</button>
-      </div>
-
-      <!-- SECTIONS -->
-      <section class="all_sections">
-        <div class="section">
-          <img src="img/img_2.jpeg" alt="Image 2" class="images grid-item" />
-          <p class="grid-item">
-            Sesame snaps apple pie jelly gingerbread oat cake sweet roll donut
-            ice cream powder. Gummies cupcake sweet roll pudding ice cream
-            cheesecake sweet roll. Bonbon tiramisu cookie icing sesame snaps
-            powder lollipop powder danish.
-          </p>
+        <label for="down--payment">Down payment</label>
+        <div class="down--payment--container">
+          <input type="number" id="down--payment" name="down--payment" />
+          <input
+            type="number"
+            id="down--payment--percent"
+            name="down--payment--percent"
+          />
         </div>
-        <div class="section">
-          <p class="grid-item">
-            Pie shortbread jujubes lollipop sweet roll soufflé. Tootsie roll
-            cookie jujubes cotton candy wafer sweet roll oat cake bonbon
-            dessert. Wafer wafer pudding jelly beans marzipan gummies sugar plum
-            danish shortbread.
-          </p>
-          <img src="img/img_3.jpeg" alt="Image 3" class="images grid-item" />
-        </div>
-        <div class="section">
-          <img src="img/img_4.jpeg" alt="Image 4" class="images grid-item" />
-          <p class="grid-item">
-            Gummies toffee pudding donut fruitcake halvah. Powder gummi bears
-            apple pie pastry tootsie roll. Chupa chups tiramisu dragée donut
-            sesame snaps gingerbread cotton candy. Macaroon carrot cake
-            croissant croissant tiramisu.
-          </p>
-        </div>
-        <div class="section">
-          <p class="grid-item">
-            Jelly beans cheesecake tart cupcake powder cupcake cake pudding
-            cheesecake. Chupa chups pudding jujubes cupcake ice cream dessert
-            candy lemon drops sugar plum.
-          </p>
-          <img src="img/img_5.jpeg" alt="Image 5" class="images grid-item" />
-        </div>
-      </section>
+        <label for="loan--term">Loan term</label>
+        <br />
+        <select id="loan--term" name="loan--term">
+          <option value="ten--yrs">10 years</option>
+          <option value="twenty--yrs">20 years</option>
+          <option value="thirty--yrs">30 years</option>
+        </select>
+        <br />
+        <label for="interest--rate">Interest rate</label>
+        <input type="number" name="interest--rate" id="interest--rate" />
+      </form>
     </main>
     <!--FOOTER-->
     <footer>
@@ -130,5 +120,5 @@
     </footer>
   </body>
   <script src="openLoginModal.js"></script>
-  <script src="main.js"></script>
+  <script src="calcMortgage.js"></script>
 </html>
