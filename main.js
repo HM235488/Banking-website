@@ -2,10 +2,10 @@
 const arrowLeft = document.querySelector(".slider__btn__left");
 const arrowRight = document.querySelector(".slider__btn__right");
 const slideImages = document.querySelectorAll(".slide_img");
-const modal = document.querySelector(".modal");
-const logInButton = document.querySelector("#login__button");
-const cancelButton = document.querySelector(".cancel__button");
-const closeButton = document.querySelector(".close__button");
+// const modal = document.querySelector(".modal");
+// const logInButton = document.querySelector("#login__button");
+// const cancelButton = document.querySelector(".cancel__button");
+// const closeButton = document.querySelector(".close__button");
 
 let curSlide = 0;
 
@@ -79,18 +79,18 @@ allSections.forEach(function (section) {
 // LOG IN AND MODAL
 
 // OPEN MODAL
-logInButton.addEventListener(
-  "click",
-  () => (modal.style.visibility = "visible")
-);
+// logInButton.addEventListener(
+//   "click",
+//   () => (modal.style.visibility = "visible")
+// );
 
-// CLOSE MODAL
-window.addEventListener("click", function (e) {
-  if (
-    e.target === modal ||
-    e.target === cancelButton ||
-    e.target === closeButton
-  ) {
-    modal.style.visibility = "hidden";
-  }
-});
+// // CLOSE MODAL
+// window.addEventListener("click", function (e) {
+//   if (
+//     e.target === modal ||
+//     e.target === cancelButton ||
+//     e.target === closeButton
+//   ) {
+//     modal.style.visibility = "hidden";
+//   }
+// });

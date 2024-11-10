@@ -1,6 +1,7 @@
 :root {
-  --backgroundColor: rgb(49, 51, 58);
-  --white: rgb(255, 255, 255);
+  --backgroundColor: rgb(255, 255, 255);
+  --buttonColor: rgb(238, 250, 255);
+  --fontColor: rgb(50, 41, 41);
 }
 
 * {
@@ -27,7 +28,7 @@ header {
   justify-content: start;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--white);
+  color: var(--fontColor);
 }
 
 /* NAVIGATION BAR */
@@ -58,7 +59,7 @@ header {
   text-align: center;
   transition: 0.15s ease-in-out;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--fontColor);
 }
 
 /* ANIMATED UNDERLINING */
@@ -69,7 +70,7 @@ header {
   left: 0;
   width: 0%;
   height: 1px;
-  background-color: var(--backgroundColor);
+  background-color: var(--fontColor);
   transition: 0.15s ease-in-out;
 }
 .menu li a:hover:after {
@@ -80,7 +81,7 @@ header {
 .open__menu,
 .close__menu {
   position: absolute;
-  color: var(--white);
+  color: var(--fontColor);
   cursor: pointer;
   font-size: 1.5rem;
   display: none;
@@ -123,7 +124,7 @@ header {
   .menu li a {
     padding: 10px;
   }
-
+  /* to make icons visible */
   .open__menu,
   .close__menu {
     display: block;
@@ -136,8 +137,8 @@ header {
 
 /* LOG IN BUTTON */
 #login__button {
-  border: 5px solid var(--white);
-  background-color: var(--white);
+  border: 1px solid var(--fontColor);
+  background-color: var(--buttonColor);
   border-radius: 50px;
 }
 
@@ -152,9 +153,8 @@ header {
 /* SLIDES */
 .slider {
   position: relative;
-  width: 70%;
-  margin: 0 auto;
-  height: 322px;
+  width: 100%;
+  height: 500px;
   display: flex;
 }
 
@@ -163,12 +163,12 @@ header {
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin: 4rem 0rem;
+  margin: 0rem 0rem;
 }
 
 .slider__btn {
-  background-color: var(--white);
-  border: 3px solid var(--white);
+  background-color: var(--buttonColor);
+  border: 1px solid var(--fontColor);
   border-radius: 50%;
   font-size: 30px;
   position: absolute;
@@ -178,6 +178,7 @@ header {
 .slide_img {
   width: 100%;
   position: absolute;
+  top: -100px;
   transition: transform 1s;
 }
 
@@ -231,17 +232,14 @@ header {
   padding: 2rem 0px;
   margin-top: 5rem;
   color: var(--white);
-  background-color: rgb(59, 56, 56);
+  background-color: var(--backgroundColor);
+  border-top: 1px solid var(--fontColor);
 }
 
 .footer > li {
   margin: 30px;
   cursor: pointer;
 }
-
-/* .footer > li:hover {
-  text-decoration: underline;
-} */
 
 /* MODAL */
 .modal {
@@ -254,7 +252,6 @@ header {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
-  /* padding-top: 60px; */
 }
 
 input {
@@ -263,16 +260,17 @@ input {
   margin: 8px 0;
   display: block;
   border: 1px solid #ccc;
-  box-sizing: border-box;
 }
 
 .modal__button {
-  background-color: var(--backgroundColor);
-  color: var(--white);
+  background-color: rgb(85, 187, 255);
+  color: var(--fontColor);
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 15px 0;
   border: none;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
   width: 100%;
 }
 
@@ -284,10 +282,14 @@ button:hover {
   position: absolute;
   right: 25px;
   top: 1rem;
-  color: var(--white);
+  color: rgba(0, 0, 0);
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+}
+
+.close__button:hover {
+  color: rgb(255, 255, 255);
 }
 
 #login__button {
@@ -301,7 +303,6 @@ button:hover {
   background-color: #fefefe;
   margin: 5% auto 15% auto;
   border: 1px solid #888;
-  width: 80%;
+  width: 60%;
   padding: 30px 20px;
-  /* position: relative; */
 }
